@@ -60,47 +60,93 @@ export default function Page() {
                         </h2>
                     </div>
                     
-                    {/* Structure pour les résultats */}
+                    {/* Résultats du tournoi */}
                     <div className="bg-white rounded-lg shadow-md p-8">
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div className="text-center p-6 bg-yellow-50 rounded-lg">
-                                <div className="text-4xl mb-2">🏆</div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">1ère place</h3>
-                                <p className="text-gray-600">[À compléter]</p>
-                            </div>
-                            <div className="text-center p-6 bg-gray-50 rounded-lg">
-                                <div className="text-4xl mb-2">🥈</div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">2ème place</h3>
-                                <p className="text-gray-600">[À compléter]</p>
-                            </div>
-                            <div className="text-center p-6 bg-orange-50 rounded-lg">
-                                <div className="text-4xl mb-2">🥉</div>
-                                <h3 className="text-lg font-semibold text-gray-900 mb-2">3ème place</h3>
-                                <p className="text-gray-600">[À compléter]</p>
+                        {/* Classement Brut */}
+                        <div className="mb-8">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Classement Brut</h3>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="text-center p-6 bg-yellow-50 rounded-lg border-2 border-yellow-200">
+                                    <div className="text-4xl mb-2">🏆</div>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">1ers</h4>
+                                    <p className="text-gray-700 font-medium">Antoine Lutin (Swiss PGA) &</p>
+                                    <p className="text-gray-700 font-medium">Nathalie Féraud (GC Crans-sur-Sierre)</p>
+                                    <p className="text-xl font-bold text-yellow-600 mt-2">42 pts</p>
+                                </div>
+                                <div className="text-center p-6 bg-gray-50 rounded-lg border-2 border-gray-200">
+                                    <div className="text-4xl mb-2">🥈</div>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">2es</h4>
+                                    <p className="text-gray-700 font-medium">Francisco Valera &</p>
+                                    <p className="text-gray-700 font-medium">Anna Muresan</p>
+                                    <p className="text-xl font-bold text-gray-600 mt-2">39 pts</p>
+                                </div>
                             </div>
                         </div>
-                        
-                        {/* Tableau détaillé */}
-                        <div className="mt-8">
-                            <h4 className="text-xl font-semibold text-gray-900 mb-4">Classement complet</h4>
-                            <div className="overflow-x-auto">
-                                <table className="w-full border-collapse">
-                                    <thead>
-                                        <tr className="border-b-2 border-gray-200">
-                                            <th className="text-left py-3 px-4 font-semibold text-gray-900">Position</th>
-                                            <th className="text-left py-3 px-4 font-semibold text-gray-900">Nom</th>
-                                            <th className="text-left py-3 px-4 font-semibold text-gray-900">Score</th>
-                                            <th className="text-left py-3 px-4 font-semibold text-gray-900">Flight</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr className="border-b border-gray-100">
-                                            <td className="py-3 px-4 text-gray-600" colspan="4">
-                                                <em>Résultats à ajouter...</em>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+
+                        {/* Classement Net */}
+                        <div className="mb-8">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Classement Net</h3>
+                            <div className="grid md:grid-cols-2 gap-6">
+                                <div className="text-center p-6 bg-green-50 rounded-lg border-2 border-green-200">
+                                    <div className="text-4xl mb-2">🏆</div>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">1res</h4>
+                                    <p className="text-gray-700 font-medium">Christel Dagon (GC Sion) &</p>
+                                    <p className="text-gray-700 font-medium">Nathalie Schmidt (ASGI)</p>
+                                    <p className="text-xl font-bold text-green-600 mt-2">48 pts</p>
+                                </div>
+                                <div className="text-center p-6 bg-blue-50 rounded-lg border-2 border-blue-200">
+                                    <div className="text-4xl mb-2">🥈</div>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">2es</h4>
+                                    <p className="text-gray-700 font-medium">Yann Pitteloud &</p>
+                                    <p className="text-gray-700 font-medium">Maly Kaddoura-Soa</p>
+                                    <p className="text-xl font-bold text-blue-600 mt-2">48 pts</p>
+                                    <p className="text-sm text-gray-500 mt-1">(départagés au retour)</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Concours de Précision et Distance */}
+                        <div>
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Concours de Précision et Distance</h3>
+                            <div className="grid md:grid-cols-3 gap-6">
+                                {/* Nearest to the Pin - Trou 3 */}
+                                <div className="text-center p-6 bg-purple-50 rounded-lg">
+                                    <div className="text-3xl mb-3">🎯</div>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Nearest to the Pin</h4>
+                                    <p className="text-sm text-gray-600 mb-3">Trou n°3</p>
+                                    <div className="space-y-1">
+                                        <p className="text-gray-700 font-medium">Nathalie Féraud</p>
+                                        <p className="text-sm text-gray-600">(GC Crans-sur-Sierre)</p>
+                                        <p className="text-gray-700 font-medium">Laurent Gillain</p>
+                                        <p className="text-sm text-gray-600">(GC Lausanne)</p>
+                                    </div>
+                                </div>
+
+                                {/* Longest Drive - Trou 8 */}
+                                <div className="text-center p-6 bg-red-50 rounded-lg">
+                                    <div className="text-3xl mb-3">💪</div>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Longest Drive</h4>
+                                    <p className="text-sm text-gray-600 mb-3">Trou n°8</p>
+                                    <div className="space-y-1">
+                                        <p className="text-gray-700 font-medium">Anna Muresan</p>
+                                        <p className="text-sm text-gray-600">(ASGI)</p>
+                                        <p className="text-gray-700 font-medium">Gilles Taboulot</p>
+                                        <p className="text-sm text-gray-600">(GC Sion)</p>
+                                    </div>
+                                </div>
+
+                                {/* Nearest to the Pin - Trou 17 */}
+                                <div className="text-center p-6 bg-indigo-50 rounded-lg">
+                                    <div className="text-3xl mb-3">🎯</div>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-3">Nearest to the Pin</h4>
+                                    <p className="text-sm text-gray-600 mb-3">Trou n°17</p>
+                                    <div className="space-y-1">
+                                        <p className="text-gray-700 font-medium">Beat Fischer</p>
+                                        <p className="text-sm text-gray-600">(GC Bossey)</p>
+                                        <p className="text-gray-700 font-medium">Mireille Röthlisberger</p>
+                                        <p className="text-sm text-gray-600">(ASGI)</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
