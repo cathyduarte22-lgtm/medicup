@@ -22,15 +22,19 @@ export default function Page() {
             </nav>
 
             {/* Section Hero */}
-            <section id="hero" className="pt-20 pb-16 bg-gradient-to-br from-green-50 to-blue-50">
+            <section 
+                id="hero" 
+                className="pt-20 pb-16 bg-cover bg-center bg-no-repeat"
+                style={{
+                    backgroundImage: "url('/images/header-medicup.jpg')",
+                    backgroundSize: 'cover'
+                }}
+            >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div className="py-20">
-                        <h1 className="text-5xl md:text-7xl font-bold mb-6" style={{color: '#184c3e'}}>
+                        <h1 className="text-5xl md:text-7xl font-bold mb-6" style={{color: '#eae7d7'}}>
                             Medicup
                         </h1>
-                        <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
-                            Tournoi de golf annuel
-                        </p>
                     </div>
                 </div>
             </section>
