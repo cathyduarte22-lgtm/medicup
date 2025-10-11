@@ -1,3 +1,5 @@
+'use client'
+
 export default function Page() {
     return (
         <div className="min-h-screen bg-white">
@@ -5,15 +7,15 @@ export default function Page() {
             <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center py-4">
-                        <div className="text-2xl font-bold text-green-800">Medicup</div>
+                        <div className="text-2xl font-bold" style={{color: '#184c3e'}}>Medicup</div>
                         <div className="hidden md:flex space-x-6">
-                            <a href="#hero" className="text-gray-700 hover:text-green-800 transition-colors">Accueil</a>
-                            <a href="#presentation" className="text-gray-700 hover:text-green-800 transition-colors">Présentation</a>
-                            <a href="#palmares" className="text-gray-700 hover:text-green-800 transition-colors">Palmarès</a>
-                            <a href="#galerie" className="text-gray-700 hover:text-green-800 transition-colors">Galerie</a>
-                            <a href="#video" className="text-gray-700 hover:text-green-800 transition-colors">Vidéo</a>
-                            <a href="#organisateurs" className="text-gray-700 hover:text-green-800 transition-colors">Organisateurs</a>
-                            <a href="#sponsors" className="text-gray-700 hover:text-green-800 transition-colors">Sponsors</a>
+                            <a href="#hero" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Accueil</a>
+                            <a href="#presentation" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Présentation</a>
+                            <a href="#palmares" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Palmarès</a>
+                            <a href="#galerie" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Galerie</a>
+                            <a href="#video" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Vidéo</a>
+                            <a href="#organisateurs" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Organisateurs</a>
+                            <a href="#sponsors" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Sponsors</a>
                         </div>
                     </div>
                 </div>
@@ -23,7 +25,7 @@ export default function Page() {
             <section id="hero" className="pt-20 pb-16 bg-gradient-to-br from-green-50 to-blue-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div className="py-20">
-                        <h1 className="text-5xl md:text-7xl font-bold text-green-800 mb-6">
+                        <h1 className="text-5xl md:text-7xl font-bold mb-6" style={{color: '#184c3e'}}>
                             Medicup
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -41,8 +43,9 @@ export default function Page() {
                             Qu&apos;est-ce que la Medicup ?
                         </h2>
                         <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                            L&apos;édition du 25e a eu lieu le 19 septembre 2025 sous une météo magnifique 
-                            avec 83 participant·e·s réparti·e·s en 21 flights.
+                            Qu&apos;est-ce que la Medicup ? La 25ᵉ édition de la Medicup s&apos;est tenue le 19 septembre 2025 au Golf Club de Sion, sous un soleil radieux. Cet incontournable tournoi de golf réunit chaque année les professionnel·le·s de la santé de Suisse romande. Cette année, 83 participant·e·s ont pris part à la compétition, réparti·e·s en 21 flights.
+                            <br /><br />
+                            Les organisateurs, Dre Ioana et Dr Etienne Barras, se sont réjouis de cette belle édition et ont chaleureusement remercié les sponsors pour leurs généreuses dotations. L&apos;événement soutenait cette année l&apos;association Aina Vao, et les champions du jour ont été annoncés par le club manager Sébastien Paratte lors de la remise des prix.
                         </p>
                     </div>
                 </div>
@@ -153,10 +156,13 @@ export default function Page() {
                             <p className="text-gray-600">
                                 Vidéo réalisée par{" "}
                                 <a 
-                                    href="#" 
-                                    className="text-green-800 hover:text-green-900 font-medium"
+                                    href="https://www.perlprod.ch/" 
+                                    className="font-medium"
+                                    style={{color: '#184c3e'}}
                                     target="_blank" 
                                     rel="noopener noreferrer"
+                                    onMouseEnter={(e) => e.target.style.opacity = '0.8'}
+                                    onMouseLeave={(e) => e.target.style.opacity = '1'}
                                 >
                                     PerlProd
                                 </a>
@@ -263,13 +269,13 @@ export default function Page() {
             </section>
 
             {/* Footer */}
-            <footer className="bg-green-800 text-white py-8">
+            <footer className="text-white py-8" style={{backgroundColor: '#184c3e'}}>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h3 className="text-2xl font-bold mb-4">Medicup</h3>
-                    <p className="text-green-200">
+                    <p className="opacity-80">
                         Tournoi de golf annuel - 25e édition
                     </p>
-                    <p className="text-green-200 text-sm mt-2">
+                    <p className="opacity-80 text-sm mt-2">
                         © 2025 Medicup. Tous droits réservés.
                     </p>
                 </div>
