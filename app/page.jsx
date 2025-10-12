@@ -31,8 +31,8 @@ export default function Page() {
                     backgroundPosition: 'center'
                 }}
             >
-                {/* Dark overlay for better text readability */}
-                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                {/* Light overlay for better text readability */}
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                 
                 <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div className="py-20">
@@ -184,6 +184,11 @@ export default function Page() {
                                     height="480" 
                                     alt=""
                                     className="rounded-lg shadow-md mx-auto"
+                                    style={{
+                                        maxHeight: '400px',
+                                        width: 'auto',
+                                        height: 'auto'
+                                    }}
                                 />
                             </a>
                             <script async src="//embedr.flickr.com/assets/client-code.js" charSet="utf-8"></script>
