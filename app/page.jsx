@@ -24,13 +24,17 @@ export default function Page() {
             {/* Section Hero */}
             <section 
                 id="hero" 
-                className="pt-20 pb-16 bg-cover bg-center bg-no-repeat"
+                className="pt-20 pb-16 bg-cover bg-center bg-no-repeat relative"
                 style={{
                     backgroundImage: "url('/images/header-medicup.jpg')",
-                    backgroundSize: 'cover'
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center'
                 }}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                {/* Dark overlay for better text readability */}
+                <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+                
+                <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <div className="py-20">
                         <h1 className="text-5xl md:text-7xl font-bold mb-6" style={{color: '#eae7d7'}}>
                             Medicup
@@ -166,17 +170,42 @@ export default function Page() {
                         </h2>
                     </div>
                     
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                        {Array.from({ length: 8 }, (_, i) => (
-                            <div key={i} className="aspect-square bg-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-                                <div className="w-full h-full flex items-center justify-center text-gray-500">
-                                    <div className="text-center">
-                                        <div className="text-4xl mb-2">📸</div>
-                                        <p className="text-sm">Photo {i + 1}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+                    {/* Flickr Gallery Preview */}
+                    <div className="max-w-4xl mx-auto text-center mb-8">
+                        <div className="bg-gray-50 p-8 rounded-lg">
+                            <a 
+                                data-flickr-embed="true" 
+                                href="https://www.flickr.com/photos/203644508@N02" 
+                                title=""
+                            >
+                                <img 
+                                    src="https://live.staticflickr.com/65535/54848389184_ce9c87be5d.jpg" 
+                                    width="640" 
+                                    height="480" 
+                                    alt=""
+                                    className="rounded-lg shadow-md mx-auto"
+                                />
+                            </a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charSet="utf-8"></script>
+                        </div>
+                        
+                        {/* Link to full gallery */}
+                        <div className="mt-6">
+                            <a 
+                                href="https://flic.kr/ps/46Xjb7" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-block px-8 py-3 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg transform hover:scale-105"
+                                style={{
+                                    backgroundColor: '#184c3e',
+                                    textDecoration: 'none'
+                                }}
+                                onMouseEnter={(e) => e.target.style.opacity = '0.9'}
+                                onMouseLeave={(e) => e.target.style.opacity = '1'}
+                            >
+                                Retrouvez toutes les photos
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -231,29 +260,16 @@ export default function Page() {
                         </h2>
                     </div>
                     
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+                    <div className="flex flex-col items-center">
                         <div className="text-center">
-                            <div className="w-48 h-48 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
-                                <div className="w-full h-full flex items-center justify-center text-gray-500">
-                                    <div className="text-center">
-                                        <div className="text-4xl mb-2">👤</div>
-                                        <p className="text-sm">Photo</p>
-                                    </div>
-                                </div>
+                            <div className="w-80 h-80 mx-auto mb-6 overflow-hidden rounded-full border-4 border-gray-200 shadow-lg">
+                                <img 
+                                    src="/images/organisateurs-ioana-etienne.jpg" 
+                                    alt="Dre Ioana & Dr Etienne Barras" 
+                                    className="w-full h-full object-cover"
+                                />
                             </div>
-                            <h3 className="text-xl font-semibold text-gray-900">Etienne Barras</h3>
-                        </div>
-                        
-                        <div className="text-center">
-                            <div className="w-48 h-48 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden">
-                                <div className="w-full h-full flex items-center justify-center text-gray-500">
-                                    <div className="text-center">
-                                        <div className="text-4xl mb-2">👤</div>
-                                        <p className="text-sm">Photo</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 className="text-xl font-semibold text-gray-900">Ioana Barras</h3>
+                            <h3 className="text-2xl font-semibold text-gray-900">Dre Ioana & Dr Etienne Barras</h3>
                         </div>
                     </div>
                 </div>
