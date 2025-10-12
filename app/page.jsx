@@ -7,15 +7,22 @@ export default function Page() {
             <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center py-4">
-                        <div className="text-2xl font-bold" style={{color: '#184c3e'}}>Medicup</div>
+                        <div className="flex items-center">
+                            <img 
+                                src="/images/Medicup.png" 
+                                alt="Medicup Logo" 
+                                className="h-12"
+                                style={{maxWidth: '150px'}}
+                            />
+                        </div>
                         <div className="hidden md:flex space-x-6">
-                            <a href="#hero" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Accueil</a>
-                            <a href="#presentation" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Présentation</a>
-                            <a href="#palmares" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Palmarès</a>
-                            <a href="#galerie" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Galerie</a>
-                            <a href="#video" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Vidéo</a>
-                            <a href="#organisateurs" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Organisateurs</a>
-                            <a href="#sponsors" className="text-gray-700 transition-colors" style={{"--tw-text-opacity": "1"}} onMouseEnter={(e) => e.target.style.color = '#184c3e'} onMouseLeave={(e) => e.target.style.color = ''}>Sponsors</a>
+                            <a href="#hero" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Accueil</a>
+                            <a href="#presentation" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Présentation</a>
+                            <a href="#palmares" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Palmarès</a>
+                            <a href="#galerie" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Galerie</a>
+                            <a href="#video" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Vidéo</a>
+                            <a href="#organisateurs" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Organisateurs</a>
+                            <a href="#sponsors" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Sponsors</a>
                         </div>
                     </div>
                 </div>
@@ -296,7 +303,7 @@ export default function Page() {
                                 SPONSORS PLATINE
                             </span>
                         </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                        <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
                             {[
                                 { name: 'UBS', image: '/images/UBS.png' },
                                 { name: 'Dentavis', image: '/images/Dentavis.png' },
@@ -310,7 +317,7 @@ export default function Page() {
                                                 src={sponsor.image} 
                                                 alt={sponsor.name}
                                                 className="max-w-full max-h-full object-contain"
-                                                style={{maxWidth: '500px', maxHeight: '120px'}}
+                                                style={{maxWidth: '400px', maxHeight: '120px'}}
                                             />
                                         </div>
                                         <h4 className="text-lg font-semibold text-gray-800 text-center mt-2">
@@ -329,7 +336,7 @@ export default function Page() {
                                 SPONSORS OR
                             </span>
                         </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
                             {[
                                 { name: 'Valère Clinique', image: '/images/Valère Clinique.png' },
                                 { name: 'Barras & Associés', image: '/images/Barras & Associés.png' }
@@ -360,7 +367,7 @@ export default function Page() {
                                 SPONSORS ARGENT
                             </span>
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                        <div className="flex flex-wrap justify-center gap-6">
                             {[
                                 { name: 'Accadent', image: '/images/Accadent.png' },
                                 { name: 'Kaladent', image: '/images/Kaladent.png' },
@@ -396,7 +403,7 @@ export default function Page() {
                                 SPONSORS BRONZE
                             </span>
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        <div className="flex flex-wrap justify-center gap-4">
                             {[
                                 { name: 'Fortbildung Zürichsee', image: '/images/Fortbildung Zürichsee.png' },
                                 { name: 'Groupe Mutuel', image: '/images/Groupe Mutuel.png' },
