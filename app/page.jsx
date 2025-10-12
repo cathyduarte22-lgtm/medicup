@@ -54,7 +54,7 @@ export default function Page() {
             <section id="presentation" className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-4xl font-bold mb-6" style={{color: '#184c3e'}}>
                             Qu&apos;est-ce que la Medicup ?
                         </h2>
                         <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
@@ -70,7 +70,7 @@ export default function Page() {
             <section id="palmares" className="py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-4xl font-bold mb-6" style={{color: '#184c3e'}}>
                             Palmarès 2025
                         </h2>
                     </div>
@@ -172,7 +172,7 @@ export default function Page() {
             <section id="galerie" className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-4xl font-bold mb-6" style={{color: '#184c3e'}}>
                             Galerie photos
                         </h2>
                     </div>
@@ -226,22 +226,23 @@ export default function Page() {
             <section id="video" className="py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-4xl font-bold mb-6" style={{color: '#184c3e'}}>
                             Revivez l&apos;événement
                         </h2>
                     </div>
                     
                     <div className="max-w-4xl mx-auto">
-                        <div className="aspect-video bg-gray-300 rounded-lg overflow-hidden mb-4">
-                            <div className="w-full h-full flex items-center justify-center text-gray-600">
-                                <div className="text-center">
-                                    <div className="text-6xl mb-4">▶️</div>
-                                    <p className="text-xl">Vidéo à intégrer</p>
-                                    <p className="text-sm text-gray-500 mt-2">
-                                        (iframe YouTube/Vimeo)
-                                    </p>
-                                </div>
-                            </div>
+                        <div className="relative aspect-video bg-gray-300 rounded-lg overflow-hidden mb-4">
+                            <iframe 
+                                src="https://player.vimeo.com/video/1126641813?badge=0&autopause=0&player_id=0&app_id=58479" 
+                                width="100%" 
+                                height="100%" 
+                                frameBorder="0" 
+                                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
+                                referrerPolicy="strict-origin-when-cross-origin" 
+                                title="Medicup V1"
+                                className="absolute top-0 left-0 w-full h-full"
+                            ></iframe>
                         </div>
                         <div className="text-center">
                             <p className="text-gray-600">
@@ -267,7 +268,7 @@ export default function Page() {
             <section id="organisateurs" className="py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-4xl font-bold mb-6" style={{color: '#184c3e'}}>
                             Les organisateurs
                         </h2>
                     </div>
@@ -291,7 +292,7 @@ export default function Page() {
             <section id="sponsors" className="py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                        <h2 className="text-4xl font-bold mb-6" style={{color: '#184c3e'}}>
                             Nos sponsors
                         </h2>
                     </div>
@@ -305,20 +306,22 @@ export default function Page() {
                         </h3>
                         <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
                             {[
-                                { name: 'UBS', image: '/images/UBS.png' },
-                                { name: 'Dentavis', image: '/images/Dentavis.png' },
-                                { name: 'Dianalabs Valais', image: '/images/Dianalabs Valais.png' },
-                                { name: 'Gespower', image: '/images/Gespower.png' }
+                                { name: 'UBS', image: '/images/UBS.png', url: 'https://www.ubs.com/ch/fr.html' },
+                                { name: 'Dentavis', image: '/images/Dentavis.png', url: 'https://www.dentavis.ch/' },
+                                { name: 'Dianalabs Valais', image: '/images/Dianalabs Valais.png', url: 'https://www.dianalabs-valais.ch/' },
+                                { name: 'Gespower', image: '/images/Gespower.png', url: 'https://www.gespower.ch/' }
                             ].map((sponsor, index) => (
                                 <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                                     <div className="flex flex-col items-center">
                                         <div className="w-full max-w-md mb-4 flex items-center justify-center" style={{minHeight: '120px'}}>
-                                            <img 
-                                                src={sponsor.image} 
-                                                alt={sponsor.name}
-                                                className="max-w-full max-h-full object-contain"
-                                                style={{maxWidth: '400px', maxHeight: '120px'}}
-                                            />
+                                            <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+                                                <img 
+                                                    src={sponsor.image} 
+                                                    alt={sponsor.name}
+                                                    className="max-w-full max-h-full object-contain"
+                                                    style={{maxWidth: '330px', maxHeight: '120px'}}
+                                                />
+                                            </a>
                                         </div>
                                         <h4 className="text-lg font-semibold text-gray-800 text-center mt-2">
                                             {sponsor.name}
@@ -338,18 +341,20 @@ export default function Page() {
                         </h3>
                         <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
                             {[
-                                { name: 'Valère Clinique', image: '/images/Valère Clinique.png' },
-                                { name: 'Barras & Associés', image: '/images/Barras & Associés.png' }
+                                { name: 'Valère Clinique', image: '/images/Valère Clinique.png', url: 'https://www.swissmedical.net/fr/centres-medicaux/valere' },
+                                { name: 'Barras & Associés', image: '/images/Barras & Associés.png', url: 'https://www.dentiste-barras.ch/' }
                             ].map((sponsor, index) => (
                                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                                     <div className="flex flex-col items-center">
                                         <div className="w-full max-w-sm mb-4 flex items-center justify-center" style={{minHeight: '100px'}}>
-                                            <img 
-                                                src={sponsor.image} 
-                                                alt={sponsor.name}
-                                                className="max-w-full max-h-full object-contain"
-                                                style={{maxWidth: '380px', maxHeight: '100px'}}
-                                            />
+                                            <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+                                                <img 
+                                                    src={sponsor.image} 
+                                                    alt={sponsor.name}
+                                                    className="max-w-full max-h-full object-contain"
+                                                    style={{maxWidth: '380px', maxHeight: '100px'}}
+                                                />
+                                            </a>
                                         </div>
                                         <h4 className="text-lg font-semibold text-gray-800 text-center mt-2">
                                             {sponsor.name}
@@ -369,23 +374,25 @@ export default function Page() {
                         </h3>
                         <div className="flex flex-wrap justify-center gap-6">
                             {[
-                                { name: 'Accadent', image: '/images/Accadent.png' },
-                                { name: 'Kaladent', image: '/images/Kaladent.png' },
-                                { name: 'Optision', image: '/images/Optision.png' },
-                                { name: 'Orcos Medical', image: '/images/Orcos Medical.png' },
-                                { name: 'Domaine des Roses', image: '/images/Domaine des Roses.png' },
-                                { name: 'Dentimed', image: '/images/Dentimed.png' },
-                                { name: 'Jo Gaudard', image: '/images/Jo Gaudard.png' }
+                                { name: 'Accadent', image: '/images/Accadent.png', url: 'https://www.acadent.ch/' },
+                                { name: 'Kaladent', image: '/images/Kaladent.png', url: 'https://www.kaladent.ch/fr/homepage-fr/' },
+                                { name: 'Optision', image: '/images/Optision.png', url: 'https://www.optision.ch/' },
+                                { name: 'Orcos Medical', image: '/images/Orcos Medical.png', url: 'https://orcos.ch/fr/' },
+                                { name: 'Domaine des Roses', image: '/images/Domaine des Roses.png', url: 'https://domainedesroses.ch/' },
+                                { name: 'Dentimed', image: '/images/Dentimed.png', url: 'https://www.dentimed.ch/' },
+                                { name: 'Jo Gaudard', image: '/images/Jo Gaudard.png', url: 'https://domainedesroses.ch/' }
                             ].map((sponsor, index) => (
                                 <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                                     <div className="flex flex-col items-center">
                                         <div className="w-full mb-3 flex items-center justify-center" style={{minHeight: '80px'}}>
-                                            <img 
-                                                src={sponsor.image} 
-                                                alt={sponsor.name}
-                                                className="max-w-full max-h-full object-contain"
-                                                style={{maxWidth: '280px', maxHeight: '80px'}}
-                                            />
+                                            <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+                                                <img 
+                                                    src={sponsor.image} 
+                                                    alt={sponsor.name}
+                                                    className="max-w-full max-h-full object-contain"
+                                                    style={{maxWidth: '280px', maxHeight: '80px'}}
+                                                />
+                                            </a>
                                         </div>
                                         <h4 className="text-sm font-semibold text-gray-800 text-center mt-1">
                                             {sponsor.name}
@@ -405,21 +412,23 @@ export default function Page() {
                         </h3>
                         <div className="flex flex-wrap justify-center gap-4">
                             {[
-                                { name: 'Fortbildung Zürichsee', image: '/images/Fortbildung Zürichsee.png' },
-                                { name: 'Groupe Mutuel', image: '/images/Groupe Mutuel.png' },
-                                { name: 'Valais Assurances', image: '/images/Valais Assurances.png' },
-                                { name: 'Pharmacie D.Machoud', image: '/images/Pharmacie D.Machoud.png' },
-                                { name: 'Smile Design', image: '/images/Smile Design.png' }
+                                { name: 'Fortbildung Zürichsee', image: '/images/Fortbildung Zürichsee.png', url: 'https://zfz.ch/' },
+                                { name: 'Groupe Mutuel', image: '/images/Groupe Mutuel.png', url: 'https://www.groupemutuel.ch/fr/clients-prives.html' },
+                                { name: 'Valais Assurances', image: '/images/Valais Assurances.png', url: 'https://www.valais-assurance.ch/' },
+                                { name: 'Pharmacie D.Machoud', image: '/images/Pharmacie D.Machoud.png', url: 'https://www.pharmacie-sion.ch/' },
+                                { name: 'Smile Design', image: '/images/Smile Design.png', url: 'https://smiledesignboutique.com/' }
                             ].map((sponsor, index) => (
                                 <div key={index} className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                                     <div className="flex flex-col items-center">
                                         <div className="w-full mb-2 flex items-center justify-center" style={{minHeight: '60px'}}>
-                                            <img 
-                                                src={sponsor.image} 
-                                                alt={sponsor.name}
-                                                className="max-w-full max-h-full object-contain"
-                                                style={{maxWidth: '180px', maxHeight: '60px'}}
-                                            />
+                                            <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+                                                <img 
+                                                    src={sponsor.image} 
+                                                    alt={sponsor.name}
+                                                    className="max-w-full max-h-full object-contain"
+                                                    style={{maxWidth: '180px', maxHeight: '60px'}}
+                                                />
+                                            </a>
                                         </div>
                                         <h4 className="text-xs font-semibold text-gray-800 text-center mt-1">
                                             {sponsor.name}
