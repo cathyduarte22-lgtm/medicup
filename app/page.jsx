@@ -58,9 +58,9 @@ export default function Page() {
                             Qu&apos;est-ce que la Medicup ?
                         </h2>
                         <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                            Qu&apos;est-ce que la Medicup ? La 25ᵉ édition de la Medicup s&apos;est tenue le 19 septembre 2025 au Golf Club de Sion, sous un soleil radieux. Cet incontournable tournoi de golf réunit chaque année les professionnel·le·s de la santé de Suisse romande. Cette année, 83 participant·e·s ont pris part à la compétition, réparti·e·s en 21 flights.
+                            La Medicup, c&apos;est le rendez-vous golfique annuel des professionnel·le·s de la santé de Suisse romande. Organisé depuis 25 ans, ce tournoi mêle sport, convivialité et solidarité. L&apos;édition 2025 s&apos;est déroulée le 19 septembre au Golf Club de Sion, sous un magnifique soleil, rassemblant 83 participant·e·s réparti·e·s en 21 flights.
                             <br /><br />
-                            Les organisateurs, Dre Ioana et Dr Etienne Barras, se sont réjouis de cette belle édition et ont chaleureusement remercié les sponsors pour leurs généreuses dotations. L&apos;événement soutenait cette année l&apos;association Aina Vao, et les champions du jour ont été annoncés par le club manager Sébastien Paratte lors de la remise des prix.
+                            Portée par la Dre Ioana et le Dr Étienne Barras, la Medicup met aussi en avant une cause solidaire ! Cette année; l&apos;association Aina Vao. La journée s&apos;est conclue par une remise des prix animée par le club manager, Sébastien Paratte, célébrant les performances des champion·ne·s du jour et la générosité des sponsors.
                         </p>
                     </div>
                 </div>
