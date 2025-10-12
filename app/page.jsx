@@ -289,16 +289,64 @@ export default function Page() {
                         </h2>
                     </div>
                     
-                    {/* Sponsors Or */}
-                    <div className="mb-12">
-                        <h3 className="text-2xl font-semibold text-yellow-600 text-center mb-6">
-                            Sponsors Or
+                    {/* Sponsors Platine */}
+                    <div className="mb-16">
+                        <h3 className="text-3xl font-bold text-center mb-8" style={{color: '#e5e7eb'}}>
+                            <span className="bg-gradient-to-r from-gray-300 to-gray-400 bg-clip-text text-transparent">
+                                SPONSORS PLATINE
+                            </span>
                         </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {Array.from({ length: 3 }, (_, i) => (
-                                <div key={i} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-                                    <div className="h-24 bg-gray-200 rounded flex items-center justify-center mb-4">
-                                        <span className="text-gray-500">Logo sponsor or {i + 1}</span>
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                            {[
+                                { name: 'UBS', image: '/images/UBS.png' },
+                                { name: 'Dentavis', image: '/images/Dentavis.png' },
+                                { name: 'Dianalabs Valais', image: '/images/Dianalabs Valais.png' },
+                                { name: 'Gespower', image: '/images/Gespower.png' }
+                            ].map((sponsor, index) => (
+                                <div key={index} className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                                    <div className="flex flex-col items-center">
+                                        <div className="w-full max-w-md mb-4 flex items-center justify-center" style={{minHeight: '120px'}}>
+                                            <img 
+                                                src={sponsor.image} 
+                                                alt={sponsor.name}
+                                                className="max-w-full max-h-full object-contain"
+                                                style={{maxWidth: '500px', maxHeight: '120px'}}
+                                            />
+                                        </div>
+                                        <h4 className="text-lg font-semibold text-gray-800 text-center mt-2">
+                                            {sponsor.name}
+                                        </h4>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
+                    {/* Sponsors Or */}
+                    <div className="mb-16">
+                        <h3 className="text-3xl font-bold text-center mb-8" style={{color: '#fbbf24'}}>
+                            <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+                                SPONSORS OR
+                            </span>
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                            {[
+                                { name: 'Valère Clinique', image: '/images/Valère Clinique.png' },
+                                { name: 'Barras & Associés', image: '/images/Barras & Associés.png' }
+                            ].map((sponsor, index) => (
+                                <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+                                    <div className="flex flex-col items-center">
+                                        <div className="w-full max-w-sm mb-4 flex items-center justify-center" style={{minHeight: '100px'}}>
+                                            <img 
+                                                src={sponsor.image} 
+                                                alt={sponsor.name}
+                                                className="max-w-full max-h-full object-contain"
+                                                style={{maxWidth: '380px', maxHeight: '100px'}}
+                                            />
+                                        </div>
+                                        <h4 className="text-lg font-semibold text-gray-800 text-center mt-2">
+                                            {sponsor.name}
+                                        </h4>
                                     </div>
                                 </div>
                             ))}
@@ -306,15 +354,35 @@ export default function Page() {
                     </div>
                     
                     {/* Sponsors Argent */}
-                    <div className="mb-12">
-                        <h3 className="text-2xl font-semibold text-gray-500 text-center mb-6">
-                            Sponsors Argent
+                    <div className="mb-16">
+                        <h3 className="text-3xl font-bold text-center mb-8" style={{color: '#9ca3af'}}>
+                            <span className="bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent">
+                                SPONSORS ARGENT
+                            </span>
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                            {Array.from({ length: 4 }, (_, i) => (
-                                <div key={i} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-                                    <div className="h-16 bg-gray-200 rounded flex items-center justify-center">
-                                        <span className="text-gray-500 text-sm">Logo argent {i + 1}</span>
+                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                            {[
+                                { name: 'Accadent', image: '/images/Accadent.png' },
+                                { name: 'Kaladent', image: '/images/Kaladent.png' },
+                                { name: 'Optision', image: '/images/Optision.png' },
+                                { name: 'Orcos Medical', image: '/images/Orcos Medical.png' },
+                                { name: 'Domaine des Roses', image: '/images/Domaine des Roses.png' },
+                                { name: 'Dentimed', image: '/images/Dentimed.png' },
+                                { name: 'Jo Gaudard', image: '/images/Jo Gaudard.png' }
+                            ].map((sponsor, index) => (
+                                <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                    <div className="flex flex-col items-center">
+                                        <div className="w-full mb-3 flex items-center justify-center" style={{minHeight: '80px'}}>
+                                            <img 
+                                                src={sponsor.image} 
+                                                alt={sponsor.name}
+                                                className="max-w-full max-h-full object-contain"
+                                                style={{maxWidth: '280px', maxHeight: '80px'}}
+                                            />
+                                        </div>
+                                        <h4 className="text-sm font-semibold text-gray-800 text-center mt-1">
+                                            {sponsor.name}
+                                        </h4>
                                     </div>
                                 </div>
                             ))}
@@ -323,14 +391,32 @@ export default function Page() {
                     
                     {/* Sponsors Bronze */}
                     <div>
-                        <h3 className="text-2xl font-semibold text-orange-600 text-center mb-6">
-                            Sponsors Bronze
+                        <h3 className="text-3xl font-bold text-center mb-8" style={{color: '#cd7c2f'}}>
+                            <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+                                SPONSORS BRONZE
+                            </span>
                         </h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                            {Array.from({ length: 6 }, (_, i) => (
-                                <div key={i} className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer">
-                                    <div className="h-12 bg-gray-200 rounded flex items-center justify-center">
-                                        <span className="text-gray-500 text-xs">Logo {i + 1}</span>
+                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                            {[
+                                { name: 'Fortbildung Zürichsee', image: '/images/Fortbildung Zürichsee.png' },
+                                { name: 'Groupe Mutuel', image: '/images/Groupe Mutuel.png' },
+                                { name: 'Valais Assurances', image: '/images/Valais Assurances.png' },
+                                { name: 'Pharmacie D.Machoud', image: '/images/Pharmacie D.Machoud.png' },
+                                { name: 'Smile Design', image: '/images/Smile Design.png' }
+                            ].map((sponsor, index) => (
+                                <div key={index} className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                    <div className="flex flex-col items-center">
+                                        <div className="w-full mb-2 flex items-center justify-center" style={{minHeight: '60px'}}>
+                                            <img 
+                                                src={sponsor.image} 
+                                                alt={sponsor.name}
+                                                className="max-w-full max-h-full object-contain"
+                                                style={{maxWidth: '180px', maxHeight: '60px'}}
+                                            />
+                                        </div>
+                                        <h4 className="text-xs font-semibold text-gray-800 text-center mt-1">
+                                            {sponsor.name}
+                                        </h4>
                                     </div>
                                 </div>
                             ))}
