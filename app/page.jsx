@@ -62,6 +62,16 @@ export default function Page() {
                             <br /><br />
                             Portée par la Dre Ioana et le Dr Étienne Barras, la Medicup met aussi en avant une cause solidaire ! Cette année; l&apos;association Aina Vao. La journée s&apos;est conclue par une remise des prix animée par le club manager, Sébastien Paratte, célébrant les performances des champion·ne·s du jour et la générosité des sponsors.
                         </p>
+                        
+                        {/* Golf de Sion Logo */}
+                        <div className="text-center mt-8">
+                            <img 
+                                src="/images/golf de sion.png" 
+                                alt="Golf de Sion" 
+                                className="mx-auto"
+                                style={{width: '200px', marginTop: '40px'}}
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
@@ -104,7 +114,7 @@ export default function Page() {
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="text-center p-6 bg-green-50 rounded-lg border-2 border-green-200">
                                     <div className="text-4xl mb-2">🏆</div>
-                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">1res</h4>
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2">1ers</h4>
                                     <p className="text-gray-700 font-medium">Christel Dagon (GC Sion) &</p>
                                     <p className="text-gray-700 font-medium">Nathalie Schmidt (ASGI)</p>
                                     <p className="text-xl font-bold text-green-600 mt-2">48 pts</p>
