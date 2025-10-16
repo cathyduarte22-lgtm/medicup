@@ -352,7 +352,8 @@ export default function Page() {
                         <div className="flex flex-wrap justify-center gap-8 max-w-4xl mx-auto">
                             {[
                                 { name: 'Valère Clinique', image: '/images/Valère Clinique.png', url: 'https://www.swissmedical.net/fr/centres-medicaux/valere' },
-                                { name: 'Barras & Associés', image: '/images/Barras & Associés.png', url: 'https://www.dentiste-barras.ch/' }
+                                { name: 'Barras & Associés', image: '/images/Barras & Associés.png', url: 'https://www.dentiste-barras.ch/' },
+                                { name: 'Acuitis', image: '/images/Acuitis.png', url: 'https://ch.acuitis.com/' }
                             ].map((sponsor, index) => (
                                 <div key={index} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
                                     <div className="flex flex-col items-center">
@@ -426,7 +427,8 @@ export default function Page() {
                                 { name: 'Groupe Mutuel', image: '/images/Groupe Mutuel.png', url: 'https://www.groupemutuel.ch/fr/clients-prives.html' },
                                 { name: 'Valais Assurances', image: '/images/Valais Assurances.png', url: 'https://www.valais-assurance.ch/' },
                                 { name: 'Pharmacie D.Machoud', image: '/images/Pharmacie D.Machoud.png', url: 'https://www.pharmacie-sion.ch/' },
-                                { name: 'Smile Design', image: '/images/Smile Design.png', url: 'https://smiledesignboutique.com/' }
+                                { name: 'Smile Design', image: '/images/Smile Design.png', url: 'https://smiledesignboutique.com/' },
+                                { name: 'Espace Sourire', image: '/images/Espace Sourire.png', url: 'https://espacesourire.ch/' }
                             ].map((sponsor, index) => (
                                 <div key={index} className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                                     <div className="flex flex-col items-center">
