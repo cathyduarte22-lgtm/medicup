@@ -19,6 +19,7 @@ export default function Page() {
                             <a href="#hero" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Accueil</a>
                             <a href="#presentation" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Présentation</a>
                             <a href="#palmares" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Palmarès</a>
+                            <a href="#prix-speciaux" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Prix Spéciaux</a>
                             <a href="#galerie" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Galerie</a>
                             <a href="#video" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Vidéo</a>
                             <a href="#organisateurs" className="transition-colors" style={{color: '#184c3e'}} onMouseEnter={(e) => e.target.style.opacity = '0.8'} onMouseLeave={(e) => e.target.style.opacity = '1'}>Organisateurs</a>
@@ -58,9 +59,9 @@ export default function Page() {
                             Qu&apos;est-ce que la Medicup ?
                         </h2>
                         <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
-                            La Medicup, c&apos;est le rendez-vous golfique annuel des professionnel·le·s de la santé de Suisse romande. Organisé depuis 25 ans, ce tournoi mêle sport, convivialité et solidarité. L&apos;édition 2025 s&apos;est déroulée le 19 septembre au Golf Club de Sion, sous un magnifique soleil, rassemblant 83 participant·e·s réparti·e·s en 21 flights.
+                            La Medicup est le rendez-vous golfique annuel des professionnel·le·s de la santé de Suisse romande. Organisé depuis 25 ans, ce tournoi mêle sport, convivialité et solidarité. L&apos;édition 2025 s&apos;est déroulée le 19 septembre au Golf Club de Sion, sous un magnifique soleil, rassemblant 83 participant·e·s réparti·e·s en 21 flights.
                             <br /><br />
-                            Portée par la Dre Ioana et le Dr Étienne Barras, la Medicup met aussi en avant une cause solidaire ! Cette année; l&apos;association Aina Vao. La journée s&apos;est conclue par une remise des prix animée par le club manager, Sébastien Paratte, célébrant les performances des champion·ne·s du jour et la générosité des sponsors.
+                            Portée par la Dre Ioana et le Dr Étienne Barras, la Medicup met aussi en avant une cause solidaire ! Cette année; l&apos;association Aina Vao, qui gère un dispensaire de santé à Majunga à Madagascar a été choisie et s&apos;est vue attribuer un chèque de 2500 CHF. La journée s&apos;est conclue par une remise des prix animée par le club manager, Sébastien Paratte, célébrant les performances des champion·ne·s du jour et la générosité des sponsors.
                         </p>
                         
                         {/* Golf de Sion Logo */}
@@ -178,8 +179,25 @@ export default function Page() {
                 </div>
             </section>
 
+            {/* Section Prix Spéciaux */}
+            <section id="prix-speciaux" className="py-16 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl font-bold mb-6" style={{color: '#184c3e'}}>
+                            Prix Spéciaux
+                        </h2>
+                    </div>
+                    
+                    <div className="max-w-4xl mx-auto">
+                        <p className="text-lg text-gray-600 text-center leading-relaxed">
+                            Le tirage au sort pour le prix spécial a désigné Mme Geeta Lugon Machoud. Enfin, un prix spécial &ldquo;élégance&rdquo; a été attribué à Samuel Debons chez les hommes et Marielle Coudray chez les femmes.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
             {/* Section Galerie Photos */}
-            <section id="galerie" className="py-16 bg-white">
+            <section id="galerie" className="py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">
                         <h2 className="text-4xl font-bold mb-6" style={{color: '#184c3e'}}>
@@ -390,8 +408,7 @@ export default function Page() {
                                 { name: 'Optision', image: '/images/Optision.png', url: 'https://www.optision.ch/' },
                                 { name: 'Orcos Medical', image: '/images/Orcos Medical.png', url: 'https://orcos.ch/fr/' },
                                 { name: 'Domaine des Roses', image: '/images/Domaine des Roses.png', url: 'https://domainedesroses.ch/' },
-                                { name: 'Dentimed', image: '/images/Dentimed.png', url: 'https://www.dentimed.ch/' },
-                                { name: 'Jo Gaudard', image: '/images/Jo Gaudard.png', url: 'https://domainedesroses.ch/' }
+                                { name: 'Dentimed', image: '/images/Dentimed.png', url: 'https://www.dentimed.ch/' }
                             ].map((sponsor, index) => (
                                 <div key={index} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                                     <div className="flex flex-col items-center">
@@ -427,24 +444,34 @@ export default function Page() {
                                 { name: 'Groupe Mutuel', image: '/images/Groupe Mutuel.png', url: 'https://www.groupemutuel.ch/fr/clients-prives.html' },
                                 { name: 'Valais Assurances', image: '/images/Valais Assurances.png', url: 'https://www.valais-assurance.ch/' },
                                 { name: 'Pharmacie D.Machoud', image: '/images/Pharmacie D.Machoud.png', url: 'https://www.pharmacie-sion.ch/' },
-                                { name: 'Smile Design', image: '/images/Smile Design.png', url: 'https://smiledesignboutique.com/' },
+                                { name: 'Smile Design', image: null, url: 'https://smiledesignboutique.com/' },
                                 { name: 'Espace Sourire', image: '/images/Espace Sourire.png', url: 'https://espacesourire.ch/' }
                             ].map((sponsor, index) => (
                                 <div key={index} className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
                                     <div className="flex flex-col items-center">
-                                        <div className="w-full mb-2 flex items-center justify-center" style={{minHeight: '60px'}}>
-                                            <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
-                                                <img 
-                                                    src={sponsor.image} 
-                                                    alt={sponsor.name}
-                                                    className="max-w-full max-h-full object-contain"
-                                                    style={{maxWidth: '180px', maxHeight: '60px'}}
-                                                />
-                                            </a>
-                                        </div>
-                                        <h4 className="text-xs font-semibold text-gray-800 text-center mt-1">
-                                            {sponsor.name}
-                                        </h4>
+                                        {sponsor.image ? (
+                                            <div className="w-full mb-2 flex items-center justify-center" style={{minHeight: '60px'}}>
+                                                <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
+                                                    <img 
+                                                        src={sponsor.image} 
+                                                        alt={sponsor.name}
+                                                        className="max-w-full max-h-full object-contain"
+                                                        style={{maxWidth: '180px', maxHeight: '60px'}}
+                                                    />
+                                                </a>
+                                            </div>
+                                        ) : (
+                                            <div className="w-full mb-2 flex items-center justify-center" style={{minHeight: '60px'}}>
+                                                <a href={sponsor.url} target="_blank" rel="noopener noreferrer" className="text-lg font-semibold text-gray-800 hover:opacity-80 transition-opacity">
+                                                    {sponsor.name}
+                                                </a>
+                                            </div>
+                                        )}
+                                        {sponsor.image && (
+                                            <h4 className="text-xs font-semibold text-gray-800 text-center mt-1">
+                                                {sponsor.name}
+                                            </h4>
+                                        )}
                                     </div>
                                 </div>
                             ))}
